@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Flex Panels 💪</title>
+    <title>JavaScript 30💪</title>
     <link
       href="https://fonts.googleapis.com/css?family=Amatic+SC"
       rel="stylesheet"
@@ -32,8 +32,11 @@
 
       .panels {
         min-height: 100vh;
-        overflow: hidden;
+        overflow-x: auto;
+        overflow-y: hidden;
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
       }
 
       .panel {
@@ -52,8 +55,11 @@
         justify-content: center;
         align-items: center;
         display: flex;
-        flex: 1;
+        flex: 0.5;
         flex-direction: column;
+        min-width: 80px;
+        flex-shrink: 0;
+        cursor: pointer;
       }
 
       .panel1 {
@@ -71,6 +77,21 @@
       .panel5 {
         background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
       }
+      .panel6 {
+        background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+      }
+      .panel7 {
+        background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+      }
+      .panel8 {
+        background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+      }
+      .panel9 {
+        background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+      }
+      .panel10 {
+        background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+      }
 
       /* Flex Children */
       .panel > * {
@@ -81,18 +102,40 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
       }
 
-      .panel > *:first-child {
+      .panel a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: inherit;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease 0.2s, visibility 0.5s ease 0.2s;
+        pointer-events: none;
+      }
+
+      .panel.open a {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+
+      .panel a p:first-child {
         transform: translateY(-100%);
       }
-      .panel.open-active > *:first-child {
+      .panel.open-active a p:first-child {
         transform: translateY(0%);
       }
-      .panel > *:last-child {
+      .panel a p:last-child {
         transform: translateY(100%);
       }
-      .panel.open-active > *:last-child {
+      .panel.open-active a p:last-child {
         transform: translateY(0%);
       }
 
@@ -108,53 +151,160 @@
       }
 
       .panel.open {
-        flex: 5;
+        flex: 3;
         font-size: 40px;
+      }
+
+      /* Add a visual indicator for collapsed panels */
+      .panel:not(.open)::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        transition: all 0.3s ease;
+      }
+
+      .panel:not(.open)::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: white;
+        font-weight: bold;
+        z-index: 2;
+        transition: all 0.3s ease;
+      }
+
+      .panel {
+        position: relative;
       }
     </style>
 
     <div class="panels">
       <div class="panel panel1">
-        <p>Hey</p>
-        <p>Let's</p>
-        <p>Dance</p>
+        <a href="Day01-JavaScript Drum Kit/index.html">
+          <p>Watch</p>
+          <p>JavaScript Drum Kit</p>
+          <p>Day01</p>
+        </a>
       </div>
       <div class="panel panel2">
-        <p>Give</p>
-        <p>Take</p>
-        <p>Receive</p>
+        <a href="Day02-JS and CSS Clock/index.html">
+          <p>Watch</p>
+          <p>JS and CSS Clock</p>
+          <p>Day02</p>
+        </a>
       </div>
       <div class="panel panel3">
-        <p>Experience</p>
-        <p>It</p>
-        <p>Today</p>
+        <a href="Day03-Playing with CSS and variables/index.html">
+          <p>Watch</p>
+          <p>Playing with CSS and variables</p>
+          <p>Day03</p>
+        </a>
       </div>
       <div class="panel panel4">
-        <p>Give</p>
-        <p>All</p>
-        <p>You can</p>
+        <a href="Day04-Array Cardio1/index.html">
+          <p>Watch</p>
+          <p>Array Cardio1</p>
+          <p>Day04</p>
+        </a>
       </div>
       <div class="panel panel5">
-        <p>Life</p>
-        <p>In</p>
-        <p>Motion</p>
+        <a href="Day05-Flex Panels/index.html">
+          <p>Watch</p>
+          <p>Flex Panels</p>
+          <p>Day05</p>
+        </a>
+      </div>
+      <div class="panel panel6">
+        <a href="Day06-Type Ahead/index.html">
+          <p>Watch</p>
+          <p>Type Ahead</p>
+          <p>Day06</p>
+        </a>
+      </div>
+      <div class="panel panel7">
+        <a href="Day07-Array Cardio2/index.html">
+          <p>Watch</p>
+          <p>Array Cardio2ray Cardio2</p>
+          <p>Day07</p>
+        </a>
+      </div>
+      <div class="panel panel8">
+        <a href="Day08-HTML5 Canvas/index.html">
+          <p>Watch</p>
+          <p>HTML5 CaTvasML5 Canvas</p>
+          <p>Day08</p>
+        </a>
+      </div>
+      <div class="panel panel9">
+        <a href="Day09-Must Known Dev Tools/index.html">
+          <p>Watch</p>
+          <p>Must Known Dev Tools</p>
+          <p>Day09/p>
+        >
+      </div>
+      <div class="panel panel10">
+        <a href="Day10-Hold Shift and Check Checkboxes/index.html">
+          <p>Watch</p>
+          <p>Hold Shift and Check Checkboxes</p>
+          <p>Day10</p>
+        </a>
       </div>
     </div>
 
     <script>
       const panels = document.querySelectorAll(".panel");
-      function toggleOpen() {
+
+      function toggleOpen(e) {
+        // Close all other panels first
+        panels.forEach((panel) => {
+          if (panel !== this) {
+            panel.classList.remove("open");
+            panel.classList.remove("open-active");
+          }
+        });
+
+        // Toggle this panel
         this.classList.toggle("open");
       }
+
       function toggleActive(e) {
         if (e.propertyName.includes("flex")) {
           this.classList.toggle("open-active");
         }
       }
-      panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
-      panels.forEach((panel) =>
-        panel.addEventListener("transitionend", toggleActive)
-      );
+
+      // Prevent link clicks when panel is not expanded
+      function handleLinkClick(e) {
+        const panel = e.target.closest(".panel");
+        if (!panel.classList.contains("open")) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }
+
+      panels.forEach((panel) => {
+        panel.addEventListener("click", toggleOpen);
+        panel.addEventListener("transitionend", toggleActive);
+
+        // Add click prevention for links
+        const link = panel.querySelector("a");
+        if (link) {
+          link.addEventListener("click", handleLinkClick);
+        }
+      });
     </script>
   </body>
 </html>

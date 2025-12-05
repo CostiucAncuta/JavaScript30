@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <title>JavaScript 30💪</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Amatic+SC"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="https://fav.farm/🔥" />
+    <title>JavaScript30</title>
   </head>
   <body>
-    <style>
+    <!-- <style>
       html {
         box-sizing: border-box;
         background: #ffc600;
@@ -30,24 +27,25 @@
         box-sizing: inherit;
       }
 
-      .panels {
-        min-height: 100vh;
+      /* .panels {
+
+       min-height: 100vh;
         overflow-x: auto;
         overflow-y: hidden;
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
-      }
+        flex-wrap: nowrap; 
+      } 
 
       .panel {
-        background: #6b0f9c;
+        /* background: #6b0f9c;
         box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
         color: orangered;
         text-align: center;
         align-items: center;
         /* Safari transitionend event.propertyName === flex */
-        /* Chrome + FF transitionend event.propertyName === flex-grow */
-        transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+      /* Chrome + FF transitionend event.propertyName === flex-grow */
+      /* transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
           flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
         font-size: 20px;
         background-size: cover;
@@ -58,10 +56,10 @@
         flex: 0.5;
         flex-direction: column;
         min-width: 80px;
-        flex-shrink: 0;
-        cursor: pointer;
+        flex-shrink: 0; 
+         cursor: pointer; 
       }
-
+      
       .panel1 {
         background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
       }
@@ -70,7 +68,7 @@
       }
       .panel3 {
         background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
-      }
+      } */
       .panel4 {
         background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
       }
@@ -189,37 +187,93 @@
       .panel {
         position: relative;
       }
-    </style>
+    </style> -->
 
-    <div class="panels">
-      <div class="panel panel1">
+    <div class="container">
+      <div class="card__container">
+        <article class="card__article">
+          <img
+            src="assets/alena-jarrett-Zuvr--Dsy-M-unsplash.jpg"
+            alt="picture of a drum with two drum sticks on top"
+            class="card__img"
+          />
+
+          <div class="card__data">
+            <span class="card__description">Day01</span>
+            <h2 class="card__title">JavaScript Drum Kit</h2>
+            <a href="Day01-JavaScript Drum Kit/index.html" class="card__button"
+              >Check it out!</a
+            >
+          </div>
+        </article>
+
+        <article class="card__article">
+          <img
+            src="assets/dfy-CoNgUGm8Xjg-unsplash.jpg"
+            alt="picture of a round white and black clock against a gray concrete wall"
+            class="card__img"
+          />
+
+          <div class="card__data">
+            <span class="card__description">Day02</span>
+            <h2 class="card__title">JS and CSS Clock</h2>
+            <a href="Day02-JS and CSS Clock/index.html" class="card__button"
+              >Check it out</a
+            >
+          </div>
+        </article>
+
+        <article class="card__article">
+          <img
+            src="Day03-Playing with CSS and variables/media/roberto-nickson-_em5tYXuOQc-unsplash.jpg"
+            alt="picture of a big city night light seen from above"
+            class="card__img"
+          />
+
+          <div class="card__data">
+            <span class="card__description">Day03</span>
+            <h2 class="card__title">Playing with CSS and variables</h2>
+            <a
+              href="Day03-Playing with CSS and variables/index.html"
+              class="card__button"
+              >Check it out</a
+            >
+          </div>
+        </article>
+      </div>
+
+      <!-- <div class="panel panel1">
         <a href="Day01-JavaScript Drum Kit/index.html">
           <p>Watch</p>
           <p>JavaScript Drum Kit</p>
           <p>Day01</p>
         </a>
-      </div>
-      <div class="panel panel2">
+      </div> -->
+
+      <!-- <div class="panel panel2">
         <a href="Day02-JS and CSS Clock/index.html">
           <p>Watch</p>
           <p>JS and CSS Clock</p>
           <p>Day02</p>
         </a>
-      </div>
-      <div class="panel panel3">
+      </div> -->
+
+      <!-- <div class="panel panel3">
         <a href="Day03-Playing with CSS and variables/index.html">
           <p>Watch</p>
           <p>Playing with CSS and variables</p>
           <p>Day03</p>
         </a>
-      </div>
-      <div class="panel panel4">
+      </div> -->
+
+      <!-- <div class="panel panel4">
         <a href="Day04-Array Cardio1/index.html">
           <p>Watch</p>
           <p>Array Cardio1</p>
           <p>Day04</p>
         </a>
       </div>
+
       <div class="panel panel5">
         <a href="Day05-Flex Panels/index.html">
           <p>Watch</p>
@@ -227,6 +281,7 @@
           <p>Day05</p>
         </a>
       </div>
+
       <div class="panel panel6">
         <a href="Day06-Type Ahead/index.html">
           <p>Watch</p>
@@ -234,6 +289,7 @@
           <p>Day06</p>
         </a>
       </div>
+
       <div class="panel panel7">
         <a href="Day07-Array Cardio2/index.html">
           <p>Watch</p>
@@ -241,6 +297,7 @@
           <p>Day07</p>
         </a>
       </div>
+
       <div class="panel panel8">
         <a href="Day08-HTML5 Canvas/index.html">
           <p>Watch</p>
@@ -248,6 +305,7 @@
           <p>Day08</p>
         </a>
       </div>
+
       <div class="panel panel9">
         <a href="Day09MustKnownDevTools/index.html">
           <p>Watch</p>
@@ -255,6 +313,7 @@
           <p>Day09/p>
         >
       </div>
+
       <div class="panel panel10">
         <a href="Day10CheckMultipleCheckBoxes/index.html">
           <p>Watch</p>
@@ -263,13 +322,13 @@
         </a>
       </div>
 
-            <div class="panel panel11">
+      <div class="panel panel11">
         <a href="Day11VideoPlayer/index.html">
           <p>Watch</p>
           <p>Video Player</p>
           <p>Day11</p>
         </a>
-      </div>
+      </div> -->
     </div>
 
     <script>

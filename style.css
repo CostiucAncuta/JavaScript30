@@ -50,7 +50,7 @@ img {
 .container {
   display: grid;
   place-items: center;
-  margin: inline 1.5rem;
+  margin-inline: 1.5rem;
   padding-block: 5rem;
 }
 .card__container {
@@ -58,7 +58,7 @@ img {
   row-gap: 3.5rem;
 }
 
-.card.article {
+.card__article {
   position: relative;
   overflow: hidden;
 }
@@ -69,7 +69,7 @@ img {
 }
 .card__data {
   width: 280px;
-  background-color: #f7f7f7;
+  background-color: var(--container-color);
   padding: 1.5rem 2rem;
   box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
   border-radius: 1rem;
@@ -107,6 +107,7 @@ img {
 }
 
 /* Naming animation in hover */
+
 .card__article:hover .card__data {
   animation: show-data 1s forwards;
   opacity: 1;
@@ -142,7 +143,7 @@ img {
   }
 }
 
-@keyframes remove-overflow {
+@keyframes remove-data {
   0% {
     transform: translateY(-7rem);
   }
